@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MAIM Commerce Offer",
+  "type": "object",
+  "required": [
+    "offer_id",
+    "title",
+    "brand_layer",
+    "product_family",
+    "audience",
+    "payer",
+    "outcome",
+    "pricing_model",
+    "release_status",
+    "updated_at"
+  ],
+  "properties": {
+    "offer_id": {"type": "string"},
+    "sku": {"type": ["string", "null"]},
+    "title": {"type": "string"},
+    "brand_layer": {"enum": ["MAIM", "MAIM_ACADEMY", "SPARK_LAB", "INSTITUTIONAL", "PHYSICAL"]},
+    "product_family": {"type": "string"},
+    "audience": {"type": "string"},
+    "payer": {"type": "string"},
+    "outcome": {"type": "string"},
+    "format": {"type": "string"},
+    "pricing_model": {"enum": ["FREE", "ONE_TIME", "RECURRING", "LICENSE", "SPONSORED", "TBD"]},
+    "currency": {"type": ["string", "null"]},
+    "amount_minor": {"type": ["integer", "null"], "minimum": 0},
+    "billing_interval": {"type": ["string", "null"]},
+    "stripe_test_product_id": {"type": ["string", "null"]},
+    "stripe_test_price_id": {"type": ["string", "null"]},
+    "stripe_live_product_id": {"type": ["string", "null"]},
+    "stripe_live_price_id": {"type": ["string", "null"]},
+    "entitlement": {"type": "string"},
+    "fulfillment": {"type": "string"},
+    "fulfillment_owner": {"type": "string"},
+    "legal_version": {"type": ["string", "null"]},
+    "asset_status": {"type": "string"},
+    "checkout_status": {"type": "string"},
+    "delivery_status": {"type": "string"},
+    "release_status": {
+      "enum": ["CONCEPT", "FOUNDER_SELECTED", "APPROVED", "ASSET_BUILD", "IMPLEMENTED", "TESTED", "DEPLOYED", "VERIFIED_LIVE", "ON_HOLD", "RETIRED"]
+    },
+    "dependencies": {"type": "string"},
+    "evidence_url": {"type": ["string", "null"]},
+    "notes": {"type": "string"},
+    "updated_at": {"type": "string", "format": "date"}
+  },
+  "additionalProperties": false
+}
