@@ -1,3 +1,5 @@
+[![Edit on Hanzo](https://hanzo.ai/badges/edit-on-hanzo.svg)](https://hanzo.app/dev?repo=https%3A%2F%2Fgithub.com%2FMajorDream444%2FMAIM-Commerce-Catalog)
+
 # MAIM Commerce Catalog
 
 Canonical offer, SKU, Stripe mapping, fulfillment, and release-readiness register for the MAIM ecosystem.
